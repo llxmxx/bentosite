@@ -17,8 +17,8 @@ body {
 }
 
 .grid {
-    width:900px;
-    height:1200px;
+    width:70vw;
+    height:94vw;
 
     display:grid;
 
@@ -30,8 +30,7 @@ body {
 
 .card {
     background: #1e1e1e;
-    border-radius: 20px;
-    padding: 20px;
+    padding: 1vw;
     transition: 0.3s;
 }
 
@@ -40,19 +39,18 @@ body {
 }
 
 .wide {
-    border-top-right-radius:150px;
+    border-top-right-radius:12vw;
 }
 
 .tall {
     grid-row:span 2;
-    border-radius: 150px;
+    border-radius: 12vw;
     border-top-left-radius: 0;
 }
 
 .large {
-     grid-row:span 2;
-
-    border-bottom-right-radius:150px;
+    grid-row:span 2;
+    border-bottom-right-radius:12vw;
 }
 
 .circle {
@@ -60,12 +58,12 @@ body {
 }
 
 .orb {
-    width: 180px;
-    height:180px;
+    width: 15vw;
+    height:15vw;
     border-radius: 50%;
     position: absolute;
-    left: 58%;
-    top: 66%;
+    left: 61%;
+    top: 84%;
     transform: translate(-50%, -50%);
     backdrop-filter: blur(14px);
     background: rgba(255, 255, 255, .08);
