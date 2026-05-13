@@ -8,29 +8,40 @@
 </head>
 <body>
     <div class="grid">
-        <div class="card big">
+        <div class="card wide">
         </div>
-        <div class="card">
+        <div class="card tall">
+        </div>
+        <div class="card large">
+        </div>
+        <div class="card circle">
+        </div>
 
-        </div>
-        <div class="card">
+        <div class="orb" id="orb"></div>
 
-        </div>
-        <div class="card big" style="grid-row: span 3">
 
-        </div>
-        <div class="card">
+        <script>
+            const orb = document.getElementById('orb');
+            let dragging = false;
+            let offsetX = 0;
+            let offsetY = 0;
 
-        </div>
-        <div class="card">
-
-        </div>
-        <div class="card big" style="grid-row:span 4">
-
-        </div>
-        <div class="card big tall">
-            
-        </div>
+            orb.addEventListener('mousedown', (e) => {
+                dragging = true;
+                offsetX = e.clientX - orb.offsetLeft;
+                offsetY = e.clientY - orb.offsetTop;
+                orb.style.cursor = "grabbing";
+            })
+            document.addEventListener('mousemove', (e) => {
+                if(!dragging) return;
+                orb.style.left = `${e.clientX - offsetX}px`;
+                orb.style.top = `${e.clientY - offsetY}px`;
+            })
+            document.addEventListener('mouseup', () => {
+                dragging = false;
+                orb.style.cursor = "grab";
+            })
+        </script>
     </div>
 </body>
 </html>
