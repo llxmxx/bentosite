@@ -19,12 +19,9 @@ body {
 .grid {
     width:70vw;
     height:94vw;
-
     display:grid;
-
     grid-template-columns:2fr 1fr;
     grid-template-rows:1fr 2fr 1fr;
-
     gap:10px;
 }
 
