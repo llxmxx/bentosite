@@ -30,7 +30,8 @@ document.addEventListener('touchmove', (e) =>{
     const touch = e.touches[0];
     orb.style.left = `${touch.clientX - offsetX}px`;
     orb.style.top = `${touch.clientY - offsetY}px`;
-})
+    e.preventDefault();
+}, {passive: false})
 document.addEventListener('touchend', (e) =>{
     dragging = false;
 })
